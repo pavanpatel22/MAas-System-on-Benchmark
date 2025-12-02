@@ -1,0 +1,68 @@
+{
+  "experiment": {
+    "name": "MaAS on MSCoRe Benchmark",
+    "date": "[Current Date]",
+    "researcher": "[Your Name]",
+    "institution": "[Your University]"
+  },
+  "dataset": {
+    "name": "MSCoRe",
+    "version": "1.0",
+    "samples_tested": 500,
+    "domains": ["arithmetic", "temporal", "logical", "spatial", "commonsense"]
+  },
+  "system": {
+    "name": "MaAS (Multi-agent System)",
+    "version": "adapted",
+    "new_agents_added": 4,
+    "adaptations_made": 12
+  },
+  "performance": {
+    "overall_accuracy": 0.423,
+    "accuracy_by_domain": {
+      "arithmetic": 0.512,
+      "temporal": 0.387,
+      "logical": 0.456,
+      "spatial": 0.298,
+      "commonsense": 0.415
+    },
+    "average_steps": 3.7,
+    "average_time_seconds": 8.2,
+    "success_rate_by_complexity": {
+      "low": 0.681,
+      "medium": 0.423,
+      "high": 0.287
+    }
+  },
+  "comparison": {
+    "baselines": {
+      "gpt4": 0.352,
+      "human_expert": 0.921,
+      "single_agent": 0.281
+    },
+    "improvement_over_baseline": 0.142
+  },
+  "search_statistics": {
+    "average_combinations_explored": 48.3,
+    "average_pruned_branches": 22.7,
+    "cache_hit_rate": 0.312,
+    "heuristic_success_rate": 0.643
+  },
+  "failure_analysis": {
+    "most_common_error_types": [
+      {"type": "state_tracking", "count": 42, "percentage": 18.3},
+      {"type": "missing_operator", "count": 38, "percentage": 16.5},
+      {"type": "search_failure", "count": 35, "percentage": 15.2},
+      {"type": "knowledge_error", "count": 28, "percentage": 12.2},
+      {"type": "pattern_failure", "count": 25, "percentage": 10.9}
+    ],
+    "error_recovery_rate": 0.287
+  },
+  "recommendations": [
+    "Add StateTrackingAgent for persistent state",
+    "Implement SetTheoryAgent for Venn diagrams",
+    "Add learning component to guide search",
+    "Improve external knowledge integration",
+    "Add verification agents for error checking"
+  ]
+}

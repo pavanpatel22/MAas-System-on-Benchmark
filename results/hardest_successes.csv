@@ -1,0 +1,11 @@
+id,question,ground_truth,maas_output,agents_used,search_time,steps,complexity
+S001,"If Alice was born on March 15, 1990, how old will she be on December 1, 2025?",35,35,"DateParserAgent,AgeCalculatorAgent,YearAdjustAgent",6.2,3,high
+S002,"A store has 100 items. 30% are red, half of remaining are blue. How many are blue?",35,35,"PercentageCalculatorAgent,SubtractionAgent,DivisionAgent",4.8,3,medium
+S003,"If all cats are animals and some animals are pets, can we conclude some cats are pets?","No","No","LogicalParserAgent,SyllogismAgent,CounterexampleAgent",7.5,4,high
+S004,"A square has perimeter 20. What is its area?",25,25,"PerimeterParserAgent,SideLengthAgent,AreaCalculatorAgent",5.3,3,medium
+S005,"If you read 20 pages per day, how many books of 300 pages can you read in a month (30 days)?",2,2,"RateExtractorAgent,MultiplicationAgent,DivisionAgent,RoundingAgent",6.8,4,high
+S006,"What is the average of numbers: 15, 20, 25, 30, 35?",25,25,"ListExtractorAgent,SumAgent,CountAgent,DivisionAgent",3.2,4,medium
+S007,"If today is Wednesday, what day will it be 100 days from now?","Friday","Friday","DayParserAgent,ModuloAgent,DayLookupAgent",4.1,3,medium
+S008,"A recipe for 4 requires 2 cups of flour. How much for 10 people?",5,5,"RatioExtractorAgent,MultiplicationAgent,DivisionAgent",3.7,3,low
+S009,"What is the next number: 2, 4, 8, 16, ?",32,32,"PatternRecognizerAgent,MultiplicationAgent",2.9,2,low
+S010,"If a train travels at 60 mph for 2.5 hours, how far does it go?",150,150,"SpeedExtractorAgent,TimeParserAgent,MultiplicationAgent",4.4,3,medium

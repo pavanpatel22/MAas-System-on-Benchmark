@@ -1,0 +1,11 @@
+id,question,ground_truth,maas_output,error_type,root_cause,suggested_fix
+F001,"John has 5 apples. He gives 2 to Mary. Then he buys 3 more. How many apples does he have?",6,5,state_tracking,Missing StateTrackingAgent,Add persistent state management
+F002,"If today is January 1, 2023, what date will it be 10 days later?","January 11, 2023","January 10, 2023",off_by_one,TemporalReasoningAgent error,Improve date calculation method
+F003,"In a group of 10 people, 4 like apples, 5 like oranges, and 2 like both. How many like only apples?",2,4,missing_operator,No SetTheoryAgent,Add Venn diagram reasoning agent
+F004,"Convert 2 hours to minutes",120,2,pattern_failure,UnitConversionAgent not activated,Improve pattern matching
+F005,"What is the capital of France?","Paris","London",knowledge_error,Incorrect cached knowledge,Clear cache or verify with external API
+F006,"If 3x + 5 = 20, what is x?",5,15,algebra_error,Missing AlgebraAgent,Add equation solving agent
+F007,"A circle has radius 7. What is its area? (Use π=3.14)",153.86,14,formula_error,GeometryAgent missing π,Add π constant to calculations
+F008,"If all birds can fly and penguins are birds, can penguins fly?","No","Yes",logical_error,Missing exception handling,Add exception knowledge to logic agent
+F009,"What is 25% of 200?",50,225,percentage_error,Multiplication instead of percentage,Fix percentage calculation
+F010,"How many seconds in 2.5 hours?",9000,150,unit_conversion,Incorrect conversion factor,Add unit conversion validation

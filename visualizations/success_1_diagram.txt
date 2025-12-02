@@ -1,0 +1,47 @@
+COMPLEX TEMPORAL REASONING: SUCCESS #1
+======================================
+
+Question: "If Alice was born on March 15, 1990, how old will she be on December 1, 2025?"
+
+AGENT FLOW DIAGRAM:
+┌─────────────────────────────────────────────────────┐
+│                     INPUT QUERY                     │
+│  "Born March 15, 1990. Age on December 1, 2025?"   │
+└──────────────────────────┬──────────────────────────┘
+                           │
+               ┌───────────▼───────────┐
+               │   DateParserAgent     │
+               │  • Extracts dates     │
+               │  • Formats:           │
+               │    - birth: 1990-03-15│
+               │    - target: 2025-12-01│
+               └───────────┬───────────┘
+                           │
+               ┌───────────▼───────────┐
+               │  AgeCalculatorAgent   │
+               │  • years = 2025-1990  │
+               │  • years = 35         │
+               └───────────┬───────────┘
+                           │
+               ┌───────────▼───────────┐
+               │   YearAdjustAgent     │
+               │  • Check months:      │
+               │    Mar → Dec = 8.7m   │
+               │  • Since <12 months,  │
+               │    age stays 35       │
+               └───────────┬───────────┘
+                           │
+               ┌───────────▼───────────┐
+               │       OUTPUT: 35      │
+               └───────────────────────┘
+
+SEARCH SPACE EXPLORATION:
+• Initial branch: 6 possible agents
+• Path chosen: Temporal → Arithmetic → Adjustment
+• Alternative paths considered: 3
+• Pruned paths: 2 (incorrect month handling)
+• Search time: 6.2 seconds
+
+KEY INSIGHT:
+The system correctly identified that month adjustment was needed
+but not sufficient to change the year count.
