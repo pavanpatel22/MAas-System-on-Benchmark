@@ -1,9 +1,9 @@
 {
   "experiment": {
     "name": "MaAS on MSCoRe Benchmark",
-    "date": "[Current Date]",
-    "researcher": "[Your Name]",
-    "institution": "[Your University]"
+    "date": "01/12/2025",
+    "researcher": "Pavan Patel",
+    "institution": "Northeastern University"
   },
   "dataset": {
     "name": "MSCoRe",
